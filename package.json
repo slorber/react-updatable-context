@@ -1,6 +1,6 @@
 {
   "name": "react-updatable-context",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Regular React context with setter/updater method injected in consumer",
   "main": "ReactUpdatableContextBuild.js",
   "scripts": {

@@ -32,7 +32,10 @@ const LanguageSelector = ({language, updateLanguage}) => (
 
 import { createUpdatableContext } from 'react-updatable-context';
 
-const { Provider: LanguageProvider, Consumer: LanguageConsumer } = createUpdatableContext(); 
+const { 
+  Provider: LanguageProvider, 
+  Consumer: LanguageConsumer,
+} = createUpdatableContext(); 
 
 // Add the provider to your app like with normal Context api
 const MyApp = () => (
@@ -53,7 +56,6 @@ const AppLanguageSelector = () => (
   </LanguageConsumer>
 )
 ``` 
-
 
 
 
