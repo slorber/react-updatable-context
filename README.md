@@ -41,7 +41,8 @@ const {
 const MyApp = () => (
   <LanguageProvider 
     initialValue={"english"} 
-    afterChange={(newLanguage,oldLanguage) => console.log("Language has been updated: " + newLanguage,oldLanguage)}
+    beforeChange={(newLanguage,oldLanguage) => console.log("Language will be updated",newLanguage,oldLanguage)}
+    afterChange={(newLanguage,oldLanguage) => console.log("Language has been updated",newLanguage,oldLanguage)}
   >
     <Router/>
   </LanguageProvider>
