@@ -196,3 +196,14 @@ TODO
 - Complete examples
 - Support updates with a function (like `setState(oldState => newState)`)
 
+
+# FAQ
+
+### Is this another state management library?
+
+No. You can use this lib for whatever you want (including global state management) as long as it makes your life simple. For example, if you have a complex page and passing props and callbacks down becomes complicated you can create an updatable context fot that page.
+
+
+# License
+
+MIT
