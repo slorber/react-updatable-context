@@ -1,9 +1,12 @@
 React Updatable Context
 ==========================
 
-Allow to easily update React context Provider value, directly from the consumer.
+Sometimes it's annoying to have to manage the state outside of the Provider. 
 
-This makes the Provider stateful.
+Sometimes we just want to make the Provider stateful and be able to update it from Consumers.
+
+The React context API is a low-level API, it permits to pass down a value to a component tree and that's it. 
+This library tries to build new primitives on this API so that it's easier to use context in real life applications.
 
 ```
 yarn add react-updatable-context
@@ -176,10 +179,17 @@ const LanguageConsumer = createSubConsumer(
 );
 ```
 
-### Advanced: using a reducer
+### Using a reducer
 
-TODO reducer/dispatch example
+TODO reducer/dispatch example for those liking evented systems
 
+### Using async update functions
+
+TODO
+
+### Optimistic updates
+
+TODO
 
 # TODO
 
