@@ -191,10 +191,6 @@ TODO
 
 TODO
 
-# TODO
-
-- Complete examples
-- Support updates with a function (like `setState(oldState => newState)`)
 
 
 # FAQ
@@ -203,6 +199,27 @@ TODO
 
 No. You can use this lib for whatever you want (including global state management) as long as it makes your life simple. For example, if you have a complex page and passing props and callbacks down becomes complicated you can create an updatable context fot that page.
 
+### Does it work with React-Native?
+
+Yes. Sometimes I want to share state between react-navigation screens (for example a multi-screen wizzard). That can be a replacement for `screenProps` that are not recommended to use anymore.
+
+You can wrap your navigator with an updatable context provider for that:
+
+```jsx harmony
+const MyStackNavigator = createStackNavigator(...);
+
+const MyStatefulStackNavigator = (props) => (
+  <Provider initialValue={myInitialNavigatorState}>
+    <MyStackNavigator {...props}/>
+  </Provider>
+);
+MyStatefulStackNavigator.router = MyStackNavigator.router;
+```
+
+# TODO
+
+- Complete examples
+- Support updates with a function (like `setState(oldState => newState)`)
 
 # License
 
