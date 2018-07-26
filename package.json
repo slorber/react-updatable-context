@@ -5,7 +5,8 @@
   "main": "ReactUpdatableContextBuild.js",
   "scripts": {
     "build": "babel ReactUpdatableContext.js --out-file ReactUpdatableContextBuild.js --plugins=transform-class-properties,transform-object-rest-spread --presets=es2015,react",
-    "release": "npm run build && npm publish"
+    "release": "npm run build && npm publish",
+    "format": "prettier --write 'ReactUpdatableContext.js'"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.7"
   }
 }

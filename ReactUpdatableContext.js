@@ -129,8 +129,8 @@ export const createUpdatableContext = (
     }
 
     ConnectedConsumer.displayName = `ConnectedConsumer(${WrappedComponent.displayName ||
-    WrappedComponent.name ||
-    'Unknown'})`;
+      WrappedComponent.name ||
+      'Unknown'})`;
 
     return ConnectedConsumer;
   };
