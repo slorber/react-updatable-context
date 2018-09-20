@@ -1,3 +1,36 @@
+NOTE: I created this tool, but this is basically an inferior version of [Unstated](https://github.com/jamiebuilds/unstated) that you should use instead. If you need an HOC for unstated you can create one easily on top of the render prop api:
+
+```js
+export const connectContainer = (
+  Container,
+  mapContainerToProps = () => null,
+) => WrappedComponent => {
+  const PureWrappedComponent = pure(WrappedComponent);
+  const ConnectedComponent = ownProps => (
+    <Subscribe to={[Container]}>
+      {container => {
+        const mappedProps = mapContainerToProps(container, ownProps);
+        //console.debug('mappedProps', mappedProps, container);
+        return (
+          <PureWrappedComponent
+            {...mappedProps}
+            {...ownProps} // own props can always overrides connected props
+          />
+        );
+      }}
+    </Subscribe>
+  );
+
+  ConnectedComponent.displayName = `connectContainer(${getDisplayName(
+    WrappedComponent,
+  )})`;
+
+  return ConnectedComponent;
+};
+```
+
+
+
 React Updatable Context
 ==========================
 
